@@ -18,7 +18,7 @@ print("Degree of vertices",karate.degree())
 print("Mean: " , mean(karate.degree()))
 print("Betweeness: ", karate.edge_betweenness())
 
-plotly.tools.set_credentials_file(username='apooos3', api_key='z2yZqlKj1z4JA6WR938R')
+plotly.tools.set_credentials_file(username='apooos3', api_key='********************')
 sorted_list = sorted(karate.degree())
 
 data = [
