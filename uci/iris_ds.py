@@ -27,8 +27,7 @@ def distance():
         for k in range( i+1, 150 ):
             dist = sqrt(pow(sepal_length[i] - sepal_length[k], 2) + pow(sepal_width[i] - sepal_width[k], 2) + \
                                 pow(petal_length[i] - petal_length[k], 2) + pow(petal_width[i] - petal_width[k], 2))
-            distances[i][k] =  dist 
-            #print(distances[i][k])
+            distances[i][k] =  dist
     
     print('Euclidean distance matrix')        
     print DataFrame(distances.tolist())
@@ -130,5 +129,5 @@ def createBoxPlot():
     
     
 createGraph()
-#createBoxPlot()
+createBoxPlot()
     
