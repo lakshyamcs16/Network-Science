@@ -73,7 +73,7 @@ def createGraph():
     plot(g.degree_distribution(1))
 
 def createBoxPlot():
-    plotly.tools.set_credentials_file(username='apooos3', api_key='z2yZqlKj1z4JA6WR938R')
+    plotly.tools.set_credentials_file(username='apooos3', api_key='********************')
 
     x = []
     for _ in range(50):
