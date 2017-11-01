@@ -69,7 +69,9 @@ def createGraph():
     print(g.radius(mode="ALL"))
     print('Diameter of the generated graph is')
     print(g.diameter(directed=False, unconn=False, weights=None))
-    plot(g.degree_distribution(1))
+    print("Number of vertices:" + str(g.vcount()))
+    print("Number of edges:" + str(g.ecount())) 
+    plot(g.degree_distribution(2))
 
 def createBoxPlot():
     plotly.tools.set_credentials_file(username='apooos3', api_key='********************')
