@@ -24,14 +24,29 @@ def degree_frequency():
     deg_freq = [len(list(group)) for key, group in groupby(deg)]
     deg_freq.sort(reverse=True)
     
-    return deg_freq
+    log_deg = []
+    for i in deg_freq:
+        x = log(i)
+        log_deg.append(x)
+        
+    return {'log':log_deg, 'deg':deg_freq}
+
 
 def powerlaw():
    
-    plt.plot(degree_frequency())
+    log_log = degree_frequency()["log"]
+    deg = degree_frequency()["deg"]
+    print(log_log)
+    plt.plot(log_log)
+    plt.title("Degree distribution graph on log-log scale")
+    plt.ylabel("log of number of nodes")
+    plt.xlabel("log of Degree [k]")
+    plt.show()
+    
+    plt.plot(deg)
     plt.title("Degree distribution graph")
-    plt.ylabel("number of nodes with k links")
-    plt.xlabel("number of links [k]")
+    plt.ylabel("number of nodes")
+    plt.xlabel("Degree [k]")
     plt.show()
     
 def smallworld():
